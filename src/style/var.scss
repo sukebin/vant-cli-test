@@ -1,0 +1,43 @@
+
+//var结合 document.getElementsByTagName('body')[0].style.setProperty('--blue-color', 'red')动态修改颜色，ie上有兼容问题
+
+$sfl-red:var(--van-red);
+$sfl-gray-2: var(--van-gray-2);
+$sfl-gray-4: var(--van-gray-5);
+$sfl-gray-5: var(--van-sfl-gray-5);
+$sfl-gray-6: var(--van-sfl-gray-6);
+
+//项目主题颜色
+$sfl-primary-color: var(--van-blue);
+
+// 字体颜色
+$sfl-text-color: var(--van-gray-8);
+$sfl-text-grey-color: var(--van-gray-6);
+
+// 字体大小
+$sfl-font-size-sm: var(--van-font-size-sm);
+$sfl-font-size-md: var(--van-font-size-md);
+$sfl-font-size-lg: var(--van-font-size-lg);
+$sfl-title-size: var(--van-sfl-title-size);
+
+// iconfontSize
+$sfl-clear-icon-size: var(--van-sfl-clear-icon-size);
+$sfl-clear-icon-color:var(--van-gray-5);
+
+// 边框
+$sfl-border-color: var(--van-sfl-border-color);
+$sfl-border-width-base: 1px !default;
+$sfl-border-radius-sm: 2px !default;
+$sfl-border-radius-md: 4px !default;
+$sfl-border-radius-lg: 8px !default;
+
+// 级联控件sm-cascade-picker
+$sfl-yes-icon-size: $sfl-clear-icon-size !default;
+
+// comHeader
+$sfl-header-arrow-size: 22px !default;
+
+// sm-form
+$readonly-bgcolor: var(--van-slf-readonly-bgcolor);
+// sm-form-item
+$err-color: $sfl-red !default;

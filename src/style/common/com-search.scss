@@ -1,0 +1,45 @@
+@import '../var.scss';
+.smpicker-search {
+  padding: 8px 15px;
+  position: fixed;
+  z-index: 100;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid $sfl-border-color;
+  .search-bar {
+    padding: 0;
+    align-items: center;
+    height: 38px;
+    .van-cell {
+      font-size: 16px;
+    }
+    .van-field__left-icon {
+      height: 20px;
+      .van-icon {
+        display: inline-block;
+        img {
+          width: 20px;
+          height: 20px;
+          margin-bottom: -2px;
+          margin-right: 4px;
+        }
+      }
+    }
+    .van-search__content {
+      background: transparent;
+      border: 1px solid $sfl-border-color;
+      border-radius: 4px;
+      padding: 0px 10px;
+    }
+    .van-icon-clear {
+      font-size: $sfl-clear-icon-size;
+    }
+    .van-field__control{
+      text-align: left !important;
+    }
+  }
+}
+.vacancy {
+  height: 54px;
+}

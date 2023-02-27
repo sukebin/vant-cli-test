@@ -1,0 +1,8 @@
+@import '../var.scss';
+
+@mixin sfl-border(
+  $border-width: $sfl-border-color,
+  $border-color: $sfl-gray-2
+) {
+  border: $border-width solid $border-color;
+}

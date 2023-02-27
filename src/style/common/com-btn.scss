@@ -1,0 +1,42 @@
+@import '../var.scss';
+.btn-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 1;
+  border-top: 1px solid $sfl-border-color;
+  background: #fff;
+  .btn {
+    color: #fff;
+    height: 48px;
+    background: $sfl-primary-color;
+    border-radius: 4px;
+  }
+  .multi-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .multi-left {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      span {
+        color: $sfl-primary-color;
+      }
+    }
+    .multi-btn {
+      width: 105px;
+    }
+  }
+}
+.no-pad {
+  .btn {
+    width: 100%;
+    border-radius: 0px;
+    margin: 0;
+    bottom: 0;
+  }
+}

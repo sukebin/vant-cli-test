@@ -1,0 +1,17 @@
+@import '../style/var.scss';
+.sm-input {
+  .center-value {
+    align-items: center;
+  }
+}
+
+.commonWordBtn {
+  font-size: 16px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: $sfl-primary-color;
+}
+
+:deep(.smInput .van-field__control) {
+  min-height: 120%;
+}

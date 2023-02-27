@@ -1,0 +1,25 @@
+@import '../var.scss';
+.page-title-box {
+  width: 100%;
+  height: 46px;
+  .page-title {
+    background: $sfl-primary-color;
+    color: #fff !important;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .van-nav-bar__arrow {
+      font-size: $sfl-header-arrow-size;
+      color: #fff;
+    }
+    .van-nav-bar__title {
+      color: #fff;
+      font-size: $sfl-title-size;
+    }
+    .van-nav-bar__content {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+@import './var.scss';
+@import './css-variables.scss';
+@import './common/com-btn.scss';
+@import './common/com-header.scss';
+@import './common/com-search.scss';
+@import './common/com-title.scss';
+// @import './iconfont.scss';
+// @import '//at.alicdn.com/t/font_2694796_weqjrex21kp.css; //iconfont https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.14&manage_type=myprojects&projectId=2694796&keyword=&project_type=&page=
+
+@mixin bdstyle {
+  &.bdstyle-all {
+    border: 1px solid $sfl-border-color;
+  }
+  &.bdstyle-none {
+    border: none;
+  }
+  &.bdstyle-bottom {
+    border: none;
+    // border-right: none;
+    // border-left: none;
+    // border-bottom: 1px solid $sfl-border-color;
+    // border-radius: unset;
+  }
+}
+body {
+  color: $sfl-text-color;
+}
+
+.input {
+  display: flex;
+  font-size: $sfl-font-size-lg;
+  border: 1px solid $sfl-border-color;
+  border-radius: 5px;
+  max-width: 100%;
+  //  overflow: auto;
+  padding: 5px 8px;
+  align-items: center;
+
+  .sm-input__btn-select {
+    // font-size: $sfl-font-size-lg;
+    color: $sfl-primary-color;
+  }
+  .van-icon-clear {
+    font-size: $sfl-clear-icon-size;
+    // padding-right: 10px;
+    // margin-right: 5px;
+  }
+  .van-field__button {
+    margin-left: 8px;
+  }
+  .van-field__right-icon {
+    margin-right: 0;
+    padding-right: 0px;
+    color: $sfl-clear-icon-color;
+  }
+  &::after {
+    //解决输入宽底部存在border
+    border: none;
+  }
+  .van-field__control {
+    padding: 0px 2px; //解决滚动条会挡住右边的字
+    color: $sfl-text-color;
+  }
+  .van-field__body {
+    height: 16px;
+  }
+  &.multiplelines-box {
+    .van-field__body {
+      height: auto;
+    }
+  }
+}
+.sm-form-item {
+  .input {
+    @include bdstyle;
+  }
+  .common-sm-border {
+    @include bdstyle;
+  }
+  .sm-sign-stamp-content{
+    @include bdstyle;
+  }
+}
+.common-sm-border {
+  border: 1px solid $sfl-border-color;
+  border-radius: 4px;
+  padding: 5px 15px 0px 15px;
+}
+.common-arrow-icon {
+  color: #c3cbcf;
+  font-size: 14px;
+  font-weight: 700;
+}
+@mixin redBorder() {
+  border: 1px solid $sfl-red !important;
+}
+
+//校验错误输出样式 --->sm-form-item中样式
+.validate--inFormItem{
+  .sm-form-item {
+    &.is-error {
+      .input {
+        @include redBorder;
+      }
+      .sm-sign-opinion-content {
+        @include redBorder;
+      }
+      .sm-sign-stamp-content {
+        @include redBorder;
+      }
+      .sm-checkout .van-checkbox__icon .van-icon {
+        @include redBorder;
+      }
+      .sm-raido .van-radio__icon .van-icon {
+        @include redBorder;
+      }
+      .sm-countersign-content {
+        @include redBorder;
+        .sm-sign-stamp-content {
+          border: none !important;
+        }
+        .sm-sign-opinion-content {
+          border: none !important;
+        }
+        .van-checkbox__icon .van-icon {
+          border: 1px solid #c8c9cc;
+        }
+        .van-radio__icon .van-icon {
+          border: 1px solid #c8c9cc;
+        }
+      }
+      :deep(.subtalbe-box) {
+        @include redBorder;
+      }
+      .common-sm-border {
+        @include redBorder;
+      }
+    }
+  }
+}
+// 校验样式 ---> 组件内模式
+.validate--inComponent{
+  @mixin redColor(){
+    color:$sfl-red;
+  }
+  .sm-form-item {
+    &.is-error {
+      input::-webkit-input-placeholder {
+        @include redColor;
+      }
+      textarea::-webkit-input-placeholder {
+        @include redColor;
+      }
+      
+      .input .van-field__control{
+        @include redColor;
+      }
+      // 复选框
+      .sm-checkbox,.sm-radio{
+        .van-icon{
+          border-color:$sfl-red;
+        }
+      }
+    }
+  }
+  
+}
+
